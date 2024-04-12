@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+:root{
+    --green: green;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0.1rem solid rgba(200, 191, 191, 0.775);
+    --outline:2rem solid rgba(0,0,0.1);
+    --grey-shade: rgba(43, 39, 39, 0.775);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+ background-color: black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: var(--grey-shade);
+    box-shadow: var(--box-shadow);
+    
+}
+
+.header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: whitesmoke;
+
+}
+
+.header .navbar a:hover{
+    color: silver;
+
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons div:hover{
+    background-color: silver;
+    color: black;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+.header .search-form{
+    border: 1px solid ;
+    position:absolute;
+    top:110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height: 100%;
+    width:100% ;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: black;
+    padding: 0 1.5rem;
+
+}
+
+.header .search-form label{
+ font-size: 2.2rem;
+ padding-right: 1.5rem;
+ color: black;   
+}
+
+.header .search-form label:hover{
+    color: silver;
+}
+
+.header .shopping-cart{
+    border: 1px solid white;
+    position: absolute;
+    top:110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background-color: var(--grey-shade);
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    /* position: relative; didnt understand why we gave position relative here */
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box img{
+height: 10rem;
+ /* to make responsive check notion */
+}
+
+.header .shopping-cart .box .fa-trash{
+font-size: 2rem;
+position: absolute;
+top:50%;
+right: 1.5rem;
+transform: translateY(-50%);
+cursor: pointer;
+color: var(--light-color);
+
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: silver;
+}
+
+.header .shopping-cart .box .content h3{
+color: whitesmoke;
+font-size: 1.7rem;
+padding-bottom: 1rem;
+}
+
+
+.header .shopping-cart .box .content span{
+color: silver;
+font-size: 1.6rem;
+    }
+
+
+    .header .shopping-cart  .total{
+       font-size: 2.5rem;
+       padding: 1rem 0;
+       text-align: center;
+       color: whitesmoke;
+            }    
+
+ .btn{
+    border:.2rem solid whitesmoke;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    background-color: black;
+    border-radius: .5rem;
+    color: whitesmoke;
+
+ }  
+ 
+ .btn:hover{
+    background-color: silver;
+    color: black;
+ }
+
+ .header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+ }
